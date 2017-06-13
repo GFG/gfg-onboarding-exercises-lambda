@@ -9,7 +9,7 @@ const endpoint = process.env.SERVERLESS_SIMULATE ?
   process.env.DOCKER_S3_LOCAL :
   undefined;
 
-export const helloInter = (event, context, callback) => {
+export const hello = (event, context, callback) => {
   const name = (event.pathParameters && event.pathParameters.name) ? event.pathParameters.name : 'People';
   callback(null, jsonRepsonse({ say: `HI ${name}` }, 200));
 
