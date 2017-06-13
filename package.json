@@ -5,7 +5,6 @@
   "dependencies": {
     "aws-sdk": "^2.22.0",
     "babel-register": "^6.23.0",
-    "gfg-nodejs-libary-manofletters": "git+ssh://git@github.com/GFG/manofletters.git#v0.0.3",
     "lodash": "^4.17.4",
     "request": "^2.80.0"
   },
@@ -17,7 +16,6 @@
     "eslint": "^3.17.1",
     "eslint-config-airbnb-base": "^11.1.1",
     "eslint-plugin-import": "^2.2.0",
-    "gfg-cicd-scripts": "git+ssh://git@github.com/GFG/gfg-cicd-scripts.git#v1.0.1",
     "istanbul": "1.1.0-alpha.1",
     "mocha": "^3.2.0",
     "newman": "^3.5.0",
