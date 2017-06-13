@@ -11,7 +11,8 @@ const endpoint = process.env.SERVERLESS_SIMULATE ?
 
 export const helloInter = (event, context, callback) => {
   const name = (event.pathParameters && event.pathParameters.name) ? event.pathParameters.name : 'People';
-  callback(null, jsonRepsonse({ say: `HI ${name}` }, 200));
+  // callback(null, jsonRepsonse({ say: `HI ${name}` }, 200));
+    callback("some error type")
 
   // Use this code if you don't use the http event with the LAMBDA-PROXY integration
   // callback(null, { message: 'Go Serverless v1.0! Your function executed successfully!', event });
