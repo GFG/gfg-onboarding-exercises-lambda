@@ -1,0 +1,6 @@
+env:
+  profile: production
+  region: ap-southeast-1
+  vpc:
+    securityGroupIds: sg-78e88c1f
+    subnetIds: subnet-cd1e43a9

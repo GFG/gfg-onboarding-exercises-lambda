@@ -1,0 +1,6 @@
+env:
+  profile: uat
+  region: ap-southeast-1
+  vpc:
+    securityGroupIds: sg-c3ea8ea4
+    subnetIds: subnet-c6c086b0

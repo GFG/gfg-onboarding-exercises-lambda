@@ -1,0 +1,60 @@
+swagger: "2.0"
+
+info:
+  version: 1.0.0
+  title: Sample API
+  description: A Sample API
+
+schemes:
+  - https
+host: 01985ttbyj.execute-api.ap-southeast-1.amazonaws.com
+basePath: /uat/
+
+paths:
+  /apple:
+    get:
+      description: Get apple
+      parameters: []
+      responses:
+        200:
+          description: apple response
+          schema:
+            type: string
+        403:
+          description: Forbidden
+          schema:
+            type: string
+  /hello/{name}:
+    get:
+      description: Get name
+      parameters: 
+        - name: name
+          in: path
+          required: true
+          type: string
+      responses:
+        200:
+          description: Greet the user
+          schema:
+            type: string
+        403:
+          description: Forbidden
+          schema:
+            type: string
+  /user/{name}:
+    get:
+      description: Get user
+      parameters:
+        - name: name
+          in: path
+          required: true
+          type: string
+      responses:
+        200:
+          description: Return user
+          schema:
+            type: string
+        403:
+          description: Forbidden
+          schema:
+            type: string

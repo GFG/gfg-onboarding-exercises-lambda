@@ -1,0 +1,116 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: serverlessInit
+custom:
+  simulate:
+    servicesPathDest: dist
+    services: docker-compose.yml
+  optimize:
+    presets: ["latest"]
+  # s3:
+  #   port: 4569
+  #   buckets:
+  #     - local-bucket
+  #   directory: ./data
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+provider:
+  name: aws
+  runtime: nodejs4.3
+  # role:  serverlessInit-dev-ap-southeast-1-lambdaRole
+  stage: ${opt:stage}
+  region: ${file(./config/${self:provider.stage}config.yml):env.region}
+  vpc:
+    securityGroupIds:
+      - ${file(./config/${self:provider.stage}config.yml):env.vpc.securityGroupIds}
+    subnetIds:
+      - ${file(./config/${self:provider.stage}config.yml):env.vpc.subnetIds}
+  profile: ${file(./config/${self:provider.stage}config.yml):env.profile}
+  # deploymentBucket: deployment-test
+  environment:
+    STAGE: ${self:provider.stage}
+    SERVICE_NAME: ${self:service}
+    DOCKER_S3_LOCAL: 'http://172.18.0.1:8000/'
+  iamRoleStatements:
+    -  Effect: "Allow"
+       Action:
+         - "lambda:*"
+       Resource:
+         - '*'
+    - Effect: "Allow"
+      Action:
+        - ec2:CreateNetworkInterface
+        - ec2:DescribeNetworkInterfaces
+        - ec2:DescribeSecurityGroups
+        - ec2:DeleteNetworkInterface
+      Resource: "*"
+    # this is to add the actions for accessing the shared DynamoDB.
+    - Effect: Allow
+      Action: # Gives permission to DynamoDB tables in a specific region
+        - dynamodb:DescribeTable
+        - dynamodb:CreateTable
+        - dynamodb:DeleteTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource: "arn:aws:dynamodb:${file(./config/${self:provider.stage}config.yml):env.region}:*:*"
+
+package:
+  individually: true
+  exclude:
+    - node_modules/**
+plugins:
+  - serverless-plugin-simulate
+  - serverless-plugin-optimize
+  # - serverless-runtime-babel
+  # - serverless-s3-local
+# resources:
+#   Resources:
+#     S3BucketbucketGfg:
+#       Type: AWS::S3::Bucket
+#       Properties:
+#         BucketName: bucket-gfg
+functions:
+  lambdaInvoke:
+    handler: services/handler/handler.lambdaInvoke
+  filefound:
+    handler: services/handler/handler.filefound
+#    events:
+#      - s3:
+#          bucket: bucket-gfg-test
+#          event: s3:ObjectCreated:*
+  webhook:
+    handler: services/handler/handler.webhook
+    events:
+      - http:
+          path: apple
+          method: GET
+  helloInter:
+    handler: services/handler/handler.helloInter
+    events: # All events associated with this function
+      - http:
+          path: hello/{name+}
+          method: GET
+  get:
+    handler: services/user/users.get
+    # environment:
+    #   SERVERLESS_SIMULATE: ${file(./config/${self:provider.stage}config.yml):env.SERVERLESS_SIMULATE}
+    events: # All events associated with this function
+      - http:
+          path: user/{name+}
+          method: GET

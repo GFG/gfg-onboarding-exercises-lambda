@@ -1,0 +1,6 @@
+env:
+  profile: dev
+  region: ap-southeast-1
+  vpc:
+    securityGroupIds: sg-5aa6d73d
+    subnetIds: subnet-991037fd

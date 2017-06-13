@@ -1,0 +1,97 @@
+{
+	"id"	: "30fe4061-0003-1ffc-41a8-c43510e018de",
+	"name": "Sample API",
+	"description": "A Sample API",
+	"order": [],
+	"folders": [
+		{
+			"id": "96562fbf-6980-b996-aa3b-204dcdaa6c3d",
+			"name": "apple",
+			"description": "Folder for apple",
+			"order": [
+				"601e65fa-30ed-1a6c-eed2-a65d64a23b65"
+			],
+			"owner": "1646117"
+		},
+		{
+			"id": "0ed7425f-2bf8-dbda-1e66-05c74196cafa",
+			"name": "hello",
+			"description": "Folder for hello",
+			"order": [
+				"7512a02b-1c4f-1f4c-b5dc-e86b12d9ddd3"
+			],
+			"owner": "1646117"
+		},
+		{
+			"id": "e43d6d5b-e530-141c-9ed6-2ebaef29abbc",
+			"name": "user",
+			"description": "Folder for user",
+			"order": [
+				"ff97cbdd-37ec-9247-2c55-52ddaaac84aa"
+			],
+			"owner": "1646117"
+		}
+	],
+	"timestamp": 1413302258635,
+	"owner": "1646117",
+	"hasRequests": true,
+	"requests": [
+		{
+			"id": "601e65fa-30ed-1a6c-eed2-a65d64a23b65",
+			"headers": "",
+			"url": "{{url}}/uat/apple",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1489632129243,
+			"name": "https://01985ttbyj.execute-api.ap-southeast-1.amazonaws.com/uat/apple",
+			"description": "Get apple",
+			"collectionId": "30fe4061-0003-1ffc-41a8-c43510e018de",
+			"responses": []
+		},
+		{
+			"id": "7512a02b-1c4f-1f4c-b5dc-e86b12d9ddd3",
+			"headers": "",
+			"url": "{{url}}/hello/{{name}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "var resBody = JSON.parse( responseBody );\ntests['Response 200'] = responseCode.code === 200;\ntests['Response body'] = resBody.say === \"HI \" + data.name;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1489633104384,
+			"name": "https://01985ttbyj.execute-api.ap-southeast-1.amazonaws.com/uat/hello/:name",
+			"description": "Get name",
+			"collectionId": "30fe4061-0003-1ffc-41a8-c43510e018de",
+			"responses": []
+		},
+		{
+			"id": "ff97cbdd-37ec-9247-2c55-52ddaaac84aa",
+			"headers": "",
+			"url": "{{url}}/user/{{name}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "var resBody = JSON.parse( responseBody );\ntests['Response 200'] = responseCode.code === 200;\ntests['Response body'] = resBody.say === \"HI \" + data.name;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1489633103712,
+			"name": "https://01985ttbyj.execute-api.ap-southeast-1.amazonaws.com/uat/user/:name",
+			"description": "Get user",
+			"collectionId": "30fe4061-0003-1ffc-41a8-c43510e018de",
+			"responses": []
+		}
+	]
+}

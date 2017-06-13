@@ -1,0 +1,62 @@
+language: node_js
+
+node_js:
+  - '7'
+
+cache:
+  directories:
+    # Cache project modules
+    - node_modules
+    # Cache global installed modules
+    - $(npm config get prefix)/bin/github-changes
+    - $(npm config get prefix)/bin/serverless
+
+env:
+  global:
+    - API_URL="https://gr065wvpfb.execute-api.ap-southeast-1.amazonaws.com/uat"
+
+# This is needed to avoid building all the tags pushed by travis
+branches:
+  except:
+    - /^v?\d+\.\d+\.\d+$/
+    - master
+
+branches:
+  only:
+    - develop
+
+# Set up Github credential to access private dependencies and push to github
+before_install:
+  # Set credential to allow pull and push using github API token
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+  # Set user name and email for git commit author
+  - git config --global user.email "builds@travis-ci.com"
+  - git config --global user.name "Travis CI"
+  # Replace ssh GFG private repo to https with API token on npm install
+  - echo -e "[url \"https://${GH_TOKEN}@github.com/GFG/\"]\n	insteadOf = ssh://git@github.com/GFG/" >> ~/.gitconfig
+
+install:
+  - npm install
+    # prune is important for synchornizing the Travis cache folder
+  - npm prune
+
+script:
+  - npm run test
+
+before_deploy:
+  # aws cli for deploying
+  - pip install --user awscli
+  # serverless cli for deploying
+  - npm install -g serverless
+  # module to generate CHANGELOG
+  - npm install -g github-changes
+
+deploy:
+  - provider: script
+    script:
+      # Launch CI/CD pipeline scripts
+      - ./ops/cicd_scripts/cicd.sh
+    skip_cleanup: true
+    on:
+      branch: develop

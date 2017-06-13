@@ -1,0 +1,49 @@
+{
+  "name": "gfg-onboarding-exercises-lambda",
+  "version": "1.0.54",
+  "description": "",
+  "dependencies": {
+    "aws-sdk": "^2.22.0",
+    "babel-register": "^6.23.0",
+    "gfg-nodejs-libary-manofletters": "git+ssh://git@github.com/GFG/manofletters.git#v0.0.3",
+    "lodash": "^4.17.4",
+    "request": "^2.80.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-preset-latest": "^6.24.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "gfg-cicd-scripts": "git+ssh://git@github.com/GFG/gfg-cicd-scripts.git#v1.0.1",
+    "istanbul": "1.1.0-alpha.1",
+    "mocha": "^3.2.0",
+    "newman": "^3.5.0",
+    "pre-commit": "^1.1.2",
+    "serverless": "1.9.0",
+    "serverless-offline": "^3.10.3",
+    "serverless-plugin-optimize": "^1.0.0-rc.15",
+    "serverless-plugin-simulate": "^0.0.13",
+    "sinon": "^1.17.7"
+  },
+  "scripts": {
+    "clean": "rm -rf dist coverage ",
+    "test": "npm run clean && npm run build && ./node_modules/.bin/mocha dist/services/**/*.spec.js",
+    "api-test": "node test/api-testing/api-test.spec.js",
+    "start:lambda": "./node_modules/.bin/sls simulate lambda -p 4000 --stage local",
+    "start:gateway": "./node_modules/.bin/sls simulate apigateway -p 5000 --lambda-port 4000 --stage local",
+    "watch": "./node_modules/.bin/babel services --out-dir dist/services --copy-files --watch &",
+    "build": "./node_modules/.bin/babel services --out-dir dist/services --copy-files",
+    "kill:watch": "pkill -f  babel.*out-dir.*watch",
+    "eslint": "sh node_modules/gfg-cicd-scripts/commit/pre-commit-eslint.sh",
+    "coverage": "node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --compilers js:babel-core/register --colors services/**"
+  },
+  "pre-commit": [
+    "eslint",
+    "coverage"
+  ],
+  "author": "",
+  "license": "ISC"
+}

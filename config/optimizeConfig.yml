@@ -1,0 +1,9 @@
+simulate:
+  services: docker-compose.yml
+optimize:
+  debug: true
+  global: false
+  minify: true
+  prefix: "dist"
+  plugins: ["transform-decorators-legacy"]
+  presets: ["es2016"]

@@ -1,0 +1,4 @@
+env:
+  profile: local
+  region: local
+  SERVERLESS_SIMULATE: 1
