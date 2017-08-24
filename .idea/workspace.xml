@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6576ba64-d808-4d1b-85da-552a9a842481" name="Default" comment="" />
+    <list default="true" id="6576ba64-d808-4d1b-85da-552a9a842481" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gfg-gpe-approval-service" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ekho" afterPath="$PROJECT_DIR$/ekho" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfg-devops" afterPath="$PROJECT_DIR$/gfg-devops" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfg-feature-toggle" afterPath="$PROJECT_DIR$/gfg-feature-toggle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfg-gpe-frontend" afterPath="$PROJECT_DIR$/gfg-gpe-frontend" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfg-gpe-service-publishing" afterPath="$PROJECT_DIR$/gfg-gpe-service-publishing" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfg-gpe-service-skeleton" afterPath="$PROJECT_DIR$/gfg-gpe-service-skeleton" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfg-nodejs-libary" afterPath="$PROJECT_DIR$/gfg-nodejs-libary" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfg-nodejs-libary-service-discovery" afterPath="$PROJECT_DIR$/gfg-nodejs-libary-service-discovery" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfg-onboarding-exercises-lambda" afterPath="$PROJECT_DIR$/gfg-onboarding-exercises-lambda" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manofletters" afterPath="$PROJECT_DIR$/manofletters" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serverless" afterPath="$PROJECT_DIR$/serverless" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serverless-artillery" afterPath="$PROJECT_DIR$/serverless-artillery" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -15,7 +30,6 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -38,8 +52,18 @@
     <handled-path value="$PROJECT_DIR$/gfg-nodejs-libary-service-discovery/node_modules" />
     <handled-path value="$PROJECT_DIR$/gfg-onboarding-exercises-lambda/node_modules" />
     <handled-path value="$PROJECT_DIR$/manofletters/node_modules" />
+    <handled-path value="$PROJECT_DIR$/serverless-artillery/lib/lambda/node_modules" />
+    <handled-path value="$PROJECT_DIR$/serverless-artillery/node_modules" />
     <handled-path value="$PROJECT_DIR$/serverless/hellpWorldService/node_modules" />
     <handled-path value="$PROJECT_DIR$/serverless/node_modules" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/gfg-devops/aws-lambda-logs2es/functions/logs2es/package.json" />
+    <dismissed value="$PROJECT_DIR$/gfg-gpe-service-pcf/package.json" />
+    <dismissed value="$PROJECT_DIR$/gfg-gpe-service-skeleton/package.json" />
+    <dismissed value="$PROJECT_DIR$/gfg-lambda-utilities/package.json" />
+    <dismissed value="$PROJECT_DIR$/gfg-nodejs-restfulclient/package.json" />
+    <dismissed value="$PROJECT_DIR$/swagger/swagger-editor/package.json" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="62" />
@@ -47,9 +71,39 @@
     <option name="width" value="1343" />
     <option name="height" value="803" />
   </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -63,43 +117,40 @@
       <updated>1502099815859</updated>
       <workItem from="1502099831110" duration="284000" />
       <workItem from="1502100123053" duration="23000" />
+      <workItem from="1503546163463" duration="6000" />
+      <workItem from="1503546188025" duration="189000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="307000" />
+    <option name="totallyTimeSpent" value="502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="62" y="23" width="1343" height="803" extended-state="0" />
-    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/gfg-gpe-service-skeleton/node_modules/aws-sdk/scripts/services-table-generator.js" />
-        <option value="$PROJECT_DIR$/gfg-gpe-service-publishing/node_modules/aws-sdk/scripts/services-table-generator.js" />
-        <option value="$PROJECT_DIR$/gfg-onboarding-exercises-lambda/node_modules/aws-sdk/scripts/services-table-generator.js" />
-        <option value="$PROJECT_DIR$/serverless/hellpWorldService/node_modules/gfg-nodejs-libary-service-discovery/node_modules/aws-sdk/scripts/services-table-generator.js" />
-        <option value="$PROJECT_DIR$/gfg-gpe-service-publishing/node_modules/gfg-lambda-utilities/node_modules/aws-sdk/scripts/services-table-generator.js" />
+        <option value="$PROJECT_DIR$/serverless-artillery/node_modules/aws-sdk/scripts/services-table-generator.js" />
       </list>
     </option>
   </component>
