@@ -11,8 +11,9 @@
 #
 # Happy Coding!
 
-service: serverlessOnboardingExercise
+service: slsOnboardingExercise${opt:user, self:custom.defaultUser}
 custom:
+  defaultUser: '' # Used by 'service' as a default suffixe name if no --user option is given
   simulate:
     servicesPathDest: dist
     services: docker-compose.yml
