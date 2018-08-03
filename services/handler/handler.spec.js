@@ -13,7 +13,7 @@ describe('Some Lambda Func', () => {
 
   describe('When pathParameters have name call Chan', () => {
     it('should succeed with Hi Chan', (done) => {
-      handler.helloInter({ pathParameters: { name: 'Chan' } }, ctx, (err, data) => {
+      handler.hello({ pathParameters: { name: 'Chan' } }, ctx, (err, data) => {
         expect(data.body).to.deep.equal(JSON.stringify({ say: 'HI Chan' }));
         done();
       });
@@ -26,7 +26,7 @@ describe('Some Lambda Func', () => {
   });
   describe('When pathParameters no name', () => {
     it('should succeed with Hi Moses', (done) => {
-      handler.helloInter({}, ctx, (err, data) => {
+      handler.hello({}, ctx, (err, data) => {
         expect(data.body).to.deep.equal(
           JSON.stringify({ say: 'HI People' })
         );

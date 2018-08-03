@@ -9,10 +9,10 @@ const endpoint = process.env.SERVERLESS_SIMULATE ?
   process.env.DOCKER_S3_LOCAL :
   undefined;
 
-export const helloInter = (event, context, callback) => {
+export const hello = (event, context, callback) => {
   const name = (event.pathParameters && event.pathParameters.name) ? event.pathParameters.name : 'People';
-  // callback(null, jsonRepsonse({ say: `HI ${name}` }, 200));
-    callback("some error type")
+  callback(null, jsonRepsonse({ say: `HI ${name}` }, 200));
+  // callback('im an error');
 
   // Use this code if you don't use the http event with the LAMBDA-PROXY integration
   // callback(null, { message: 'Go Serverless v1.0! Your function executed successfully!', event });
