@@ -101,8 +101,8 @@ functions:
       - http:
           path: apple
           method: GET
-  helloInter:
-    handler: services/handler/handler.helloInter
+  hello:
+    handler: services/handler/handler.hello
     events: # All events associated with this function
       - http:
           path: hello/{name+}
